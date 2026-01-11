@@ -58,6 +58,44 @@ export function Contact() {
                 <i className="fas fa-comment-dots text-accent mr-3"></i>
                 Get in Touch
               </h2>
+              <motion.div 
+                className="mb-8 p-6 bg-gradient-to-r from-accent/10 to-primary/10 rounded-lg border-l-4 border-accent"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex items-start gap-3">
+                  <motion.i 
+                    className="fas fa-gift text-accent text-2xl mt-1"
+                    animate={{ 
+                      rotate: [0, 15, -15, 0],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                  ></motion.i>
+                  <div>
+                    <h3 className="text-xl font-bold text-primary mb-2 font-['Poppins']">
+                      Want a FREE Quotation?
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed mb-3">
+                      We'd love to hear about your project! Drop us an email with your requirements, 
+                      and we'll get back to you with a detailed quotation tailored to your needs. 
+                      No obligations, completely free!
+                    </p>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <i className="fas fa-envelope text-accent"></i>
+                      <a
+                        href="mailto:saiinfrastructure.official@gmail.com"
+                        className="text-primary hover:text-accent transition-colors font-semibold underline decoration-accent/30 hover:decoration-accent"
+                      >
+                        saiinfrastructure.official@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 We're here to help! Reach out to us through any of the following channels, 
                 and our team will respond to your inquiry as soon as possible.

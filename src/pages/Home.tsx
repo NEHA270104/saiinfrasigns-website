@@ -79,13 +79,23 @@ export function Home({ onNavigate }: HomeProps) {
         </div>
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <motion.h1 
-            className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 font-['Poppins'] text-white"
+          <motion.h1
+            className="mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Sai Infrastructure
+            <span 
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white block"
+              style={{ 
+                fontFamily: "'Lobster', cursive",
+                fontWeight: "700",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.3)",
+                letterSpacing: "0.02em"
+              }}
+            >
+              Sai Infrastructure
+            </span>
           </motion.h1>
 
           <motion.p 

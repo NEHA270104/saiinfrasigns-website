@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Toaster } from 'sonner@2.0.3';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { ChatBot } from './components/ChatBot';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Services } from './pages/Services';
@@ -55,6 +56,7 @@ export default function App() {
         {renderPage()}
       </main>
       <Footer onNavigate={handleNavigate} />
+      <ChatBot />
     </div>
   );
 }

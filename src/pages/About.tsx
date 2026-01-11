@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
+import { QuotationForm } from '../components/QuotationForm';
+import { useState } from 'react';
 
 export function About() {
+  const [isQuotationFormOpen, setIsQuotationFormOpen] = useState(false);
   const highlights = [
     {
       icon: 'fa-award',
@@ -365,6 +368,11 @@ export function About() {
           </motion.a>
         </div>
       </section>
+
+      {/* Quotation Form */}
+      {isQuotationFormOpen && (
+        <QuotationForm onClose={() => setIsQuotationFormOpen(false)} />
+      )}
     </div>
   );
 }

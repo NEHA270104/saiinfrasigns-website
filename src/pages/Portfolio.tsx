@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { QuotationForm } from '../components/QuotationForm';
 
 // Import real project images
-import folkChaapImage from 'figma:asset/becaa7cf28f3ce4d24a0a0db207e49fff100a30d.png';
+import folkLokImage from 'figma:asset/becaa7cf28f3ce4d24a0a0db207e49fff100a30d.png';
 import saiDentalImage from 'figma:asset/b45605f2296cc950a9da4b58cdee94ffe0563fe1.png';
 import exteriorCladdingImage from 'figma:asset/d35d7037c3d692170a8767e9bab432126e14b5c3.png';
 import swamisamarthImage from 'figma:asset/0052fc3480634a486def46206bf079c4da8573c2.png';
@@ -14,6 +15,21 @@ import tathastuImage from 'figma:asset/456ff05ad5e36854ef96470aa7162c41199e7f58.
 import samruddhiJewellersImage from 'figma:asset/dcc20aeb16a58c22f712b3d52168fec554a82975.png';
 import bookMyReadsImage from 'figma:asset/0e5bcd5f0482d06753bb07c2eaeab96f3e33ffcf.png';
 import bobstImage from 'figma:asset/5b1a92d8a7035b9e2916371ba3ee2bb245259317.png';
+import marathiSwadImage from 'figma:asset/69b8f652df261277648c9d58b4c51d6e2ca287e0.png';
+import samruddhiJewellers2Image from 'figma:asset/34fb1b9303622bd2a04545baadcd3cb011d0474b.png';
+import prathameshFunlandImage from 'figma:asset/3f0cff36d2c2e8d9f29673e984fbfc2e2209f923.png';
+import pinkSecretsImage from 'figma:asset/89b43df0cffc310c3c8efad2b39c403795dd6324.png';
+import aadinathMandirImage from 'figma:asset/457213e68132ad5a368eea5663a026261f6ec4e9.png';
+import sammyFitnessImage from 'figma:asset/51d336ffae048db82b4bfc3078fd063414e96868.png';
+import hotelPeshawaiImage from 'figma:asset/9c08e6b250f09469c147e0ae08693e57742f2318.png';
+import workshopXImage from 'figma:asset/5836e4cfbf76c1ee9fa4f044b48ee3bde5a5bf30.png';
+import davaindiaPharmacyImage from 'figma:asset/5aca2fc67396da37fde816adcb45bc32703ecc16.png';
+import goldenBakeryImage from 'figma:asset/5ac3a7a5fccae67d7694167ca3e2ce616a4bbff8.png';
+import mushroomCafeImage from 'figma:asset/79142560324aa10d30d9d7309e4b41c0ea282245.png';
+import menuBoardsImage from 'figma:asset/dba301171d167c4eac94fc978169e4b3d27316b4.png';
+import tanishqImage from 'figma:asset/3bfbc07b9050055c8c7695d158e2cb5cea656021.png';
+import kidsCareImage from 'figma:asset/65287ced2f70fb17fc9d43d3daa9d4133acc5d29.png';
+import dosamaaImage from 'figma:asset/9a1d8564ab98374861d68f603ada3758f68a33d5.png';
 
 interface PortfolioProps {
   onNavigate: (page: string) => void;
@@ -25,8 +41,8 @@ export function Portfolio({ onNavigate }: PortfolioProps) {
   const projects = [
     {
       id: 1,
-      title: 'Folk Chaap - Neon LED Signage',
-      image: folkChaapImage,
+      title: 'Folk Lok - Neon LED Signage',
+      image: folkLokImage,
       description: 'Custom neon LED signboard with unique octagonal design',
     },
     {
@@ -94,6 +110,96 @@ export function Portfolio({ onNavigate }: PortfolioProps) {
       title: 'Bobst - Restaurant Signage',
       image: bobstImage,
       description: 'Bold and colorful signboard for a popular restaurant',
+    },
+    {
+      id: 13,
+      title: 'Marathi Swad - Neon LED Signage',
+      image: marathiSwadImage,
+      description: 'Vibrant multi-color LED neon sign for authentic Marathi restaurant',
+    },
+    {
+      id: 14,
+      title: 'Samruddhi Jewellers - Premium Signage',
+      image: samruddhiJewellers2Image,
+      description: 'Elegant red and white signage for heritage jewelry store since 1832',
+    },
+    {
+      id: 15,
+      title: 'Prathamesh Funland Resort - Backlit Signage',
+      image: prathameshFunlandImage,
+      description: 'Elegant white backlit signboard for resort and entertainment complex',
+    },
+    {
+      id: 16,
+      title: 'Pink Secrets - Premium Retail Signage',
+      image: pinkSecretsImage,
+      description: 'Vibrant pink neon LED signage with brand partner displays for lingerie boutique',
+    },
+    {
+      id: 17,
+      title: 'Adinath Pimpaleshwar Mahadev Temple',
+      image: aadinathMandirImage,
+      description: 'Traditional LED signage in red with Lord Shiva imagery for temple complex',
+    },
+    {
+      id: 18,
+      title: 'Sammy Fitness Studio - Circular LED Sign',
+      image: sammyFitnessImage,
+      description: 'Modern circular backlit signboard with branch identification for fitness center',
+    },
+    {
+      id: 19,
+      title: 'Hotel Peshawai Lodge - Hospitality Signage',
+      image: hotelPeshawaiImage,
+      description: 'Professional LED signboard in Marathi with decorative deity imagery for family restaurant and hotel',
+    },
+    {
+      id: 20,
+      title: 'WorkshopX - Premium Channel Letter Signage',
+      image: workshopXImage,
+      description: 'Modern backlit channel letter signage with sleek gold and blue accent branding',
+    },
+    {
+      id: 21,
+      title: 'Davaindia Generic Pharmacy - Medical Signage',
+      image: davaindiaPharmacyImage,
+      description: 'Professional maroon LED signboard with bilingual text for pharmacy in Wanowari, Pune',
+    },
+    {
+      id: 22,
+      title: 'Golden Bakery - Neon LED Signage',
+      image: goldenBakeryImage,
+      description: 'Bright yellow LED neon signage with brand logo for premium bakery storefront',
+    },
+    {
+      id: 23,
+      title: 'Samspire The Mushroom Cafe - Backlit Signage',
+      image: mushroomCafeImage,
+      description: 'Modern turquoise backlit signboard with mushroom logo and bilingual text for cafe',
+    },
+    {
+      id: 24,
+      title: 'Restaurant Menu Boards - Interior Display',
+      image: menuBoardsImage,
+      description: 'Professional backlit menu display boards with organized food categories and pricing',
+    },
+    {
+      id: 25,
+      title: 'Tanishq Jewellers - Premium LED Signage & Promotional Display',
+      image: tanishqImage,
+      description: 'Premium LED signage with large-format promotional display sticker featuring Mrugankar collection advertising',
+    },
+    {
+      id: 26,
+      title: 'Kids Care Paediatric Clinic - Professional Medical Signage',
+      image: kidsCareImage,
+      description: 'Colorful LED signboard with playful graphics for pediatric clinic by Dr. Monika Zade',
+    },
+    {
+      id: 27,
+      title: 'Dosamaa - Restaurant LED Neon Signage',
+      image: dosamaaImage,
+      description: 'Bold LED neon signage in golden-yellow with bilingual branding for South Indian restaurant',
     },
   ];
 

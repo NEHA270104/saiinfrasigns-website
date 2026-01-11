@@ -154,7 +154,7 @@ export function Services({ onNavigate }: ServicesProps) {
                     {service.description}
                   </p>
                   
-                  <div className="space-y-3">
+                  <div className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <motion.div 
                         key={featureIndex} 
@@ -225,6 +225,11 @@ export function Services({ onNavigate }: ServicesProps) {
                 icon: 'fa-car',
                 title: 'Vehicle Branding',
                 description: 'Mobile advertising solutions for your fleet',
+              },
+              {
+                icon: 'fa-layer-group',
+                title: 'ACP Panelling Work',
+                description: 'Fabricating and installing Aluminium Composite Panels (ACP) for building exteriors (cladding, facades)',
               },
               {
                 icon: 'fa-tools',
@@ -316,15 +321,6 @@ export function Services({ onNavigate }: ServicesProps) {
               <i className="fas fa-phone mr-2"></i>
               Call Now: 8796968701
             </motion.a>
-            <motion.button
-              onClick={() => onNavigate('contact')}
-              className="bg-white text-primary px-8 py-3 rounded-lg text-lg hover:bg-gray-100 transition-colors shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <i className="fas fa-envelope mr-2"></i>
-              Send Inquiry
-            </motion.button>
           </motion.div>
         </div>
       </section>
