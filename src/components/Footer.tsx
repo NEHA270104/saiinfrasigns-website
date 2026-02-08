@@ -168,7 +168,7 @@ export function Footer({ onNavigate }: FooterProps) {
         </motion.div>
 
         <motion.div 
-          className="border-t border-blue-700 mt-8 pt-8 text-center text-sm text-gray-200"
+          className="border-t border-purple-400 mt-8 pt-8 text-center text-sm text-gray-200"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

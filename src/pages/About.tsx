@@ -92,7 +92,7 @@ export function About() {
               transition={{ duration: 0.8 }}
             >
               <motion.h2 
-                className="text-4xl font-bold text-primary mb-6 text-[#0ea5e9] font-['Poppins']"
+                className="text-4xl font-bold text-primary mb-6 font-['Poppins']"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -140,7 +140,7 @@ export function About() {
       </section>
 
       {/* Highlights */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {highlights.map((item, index) => (
@@ -164,7 +164,7 @@ export function About() {
                   <i className={`fas ${item.icon} text-3xl text-accent`}></i>
                 </motion.div>
                 <motion.h3 
-                  className="text-3xl font-bold text-primary mb-2 text-[#0ea5e9] font-['Poppins']"
+                  className="text-3xl font-bold text-primary mb-2 font-['Poppins']"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -206,7 +206,7 @@ export function About() {
                 >
                   <i className="fas fa-bullseye text-2xl text-white"></i>
                 </motion.div>
-                <h2 className="text-3xl font-bold text-primary text-[#0ea5e9] font-['Poppins']">Our Mission</h2>
+                <h2 className="text-3xl font-bold text-primary font-['Poppins']">Our Mission</h2>
               </div>
               <p className="text-gray-600 leading-relaxed relative z-10">
                 To provide exceptional LED signage and branding solutions that empower businesses 
@@ -239,7 +239,7 @@ export function About() {
                 >
                   <i className="fas fa-eye text-2xl text-white"></i>
                 </motion.div>
-                <h2 className="text-3xl font-bold text-primary text-[#0ea5e9] font-['Poppins']">Our Vision</h2>
+                <h2 className="text-3xl font-bold text-primary font-['Poppins']">Our Vision</h2>
               </div>
               <p className="text-gray-600 leading-relaxed relative z-10">
                 To become the most trusted and preferred signage solutions provider in the region, 
@@ -262,7 +262,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-primary mb-4 text-[#0ea5e9] font-['Poppins']">
+            <h2 className="text-4xl font-bold text-primary mb-4 font-['Poppins']">
               <i className="fas fa-industry text-accent mr-3"></i>
               Industry Experience
             </h2>
@@ -310,7 +310,7 @@ export function About() {
                 >
                   <i className={`fas ${item.icon} text-2xl text-accent`}></i>
                 </motion.div>
-                <h3 className="text-xl font-semibold text-primary mb-3 text-[#0ea5e9] font-['Poppins']">
+                <h3 className="text-xl font-semibold text-primary mb-3 font-['Poppins']">
                   {item.title}
                 </h3>
                 <p className="text-gray-600">

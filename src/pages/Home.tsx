@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import aboutImage from 'figma:asset/dcc20aeb16a58c22f712b3d52168fec554a82975.png';
+import heroImage from 'figma:asset/52efa67e60728bf8ec07ecdd6eabecba2f82d218.png';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -65,52 +66,114 @@ export function Home({ onNavigate }: HomeProps) {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-[500px] sm:h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <motion.img
-            src="https://images.unsplash.com/photo-1737683703423-921628a7116f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxMRUQlMjBuZW9uJTIwc2lnbmFnZSUyMHN0b3JlZnJvbnR8ZW58MXx8fHwxNzY2NjQ4OTI5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="LED Signage"
-            className="w-full h-full object-cover"
-            initial={{ scale: 1.2 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-          />
-          <div className="absolute inset-0 bg-primary/80"></div>
-        </div>
-        
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <motion.h1
+      <section className="relative min-h-[500px] sm:min-h-[600px] bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 overflow-hidden">
+        {/* Main Content */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Company Name - Bold Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="mb-4 sm:mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <span 
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white block"
-              style={{ 
-                fontFamily: "'Lobster', cursive",
-                fontWeight: "700",
-                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.3)",
-                letterSpacing: "0.02em"
-              }}
-            >
-              Sai Infrastructure
-            </span>
-          </motion.h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-orange-600 tracking-wider mb-2 leading-tight px-2 sm:px-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+              SAI INFRASTRUCTURE
+            </h1>
+          </motion.div>
 
-          <motion.p 
-            className="text-lg sm:text-xl md:text-2xl text-gray-100 px-4"
-            initial={{ opacity: 0, y: 30 }}
+          {/* Main Headline - Multi-colored */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-6 sm:mb-8 md:mb-10"
           >
-            LED Sign Board & Professional Signage Solutions
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight px-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              <motion.span 
+                className="text-orange-500"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                The Ultimate
+              </motion.span>{' '}
+              <motion.span 
+                className="text-gray-800"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+              >
+                LED Signage
+              </motion.span>{' '}
+              <motion.span 
+                className="text-orange-600"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+              >
+                Solution
+              </motion.span>
+              <br />
+              <motion.span 
+                className="text-gray-800"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.1 }}
+              >
+                for Businesses.
+              </motion.span>
+            </h2>
+          </motion.div>
+
+          {/* Description */}
+          <motion.p
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed px-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+          >
+            Design stunning LED sign boards for your business in any format whether you are a seasoned professional or a total novice.
           </motion.p>
+
+          {/* Trust Badges */}
+          <motion.div
+            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 px-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
+          >
+            <div className="flex flex-col items-center min-w-[140px]">
+              <div className="flex gap-1 mb-1">
+                {[...Array(5)].map((_, i) => (
+                  <i key={i} className="fas fa-star text-orange-500 text-xs sm:text-sm"></i>
+                ))}
+              </div>
+              <p className="text-xs sm:text-sm text-gray-600 font-semibold">500+ Happy Clients</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[140px]">
+              <div className="flex gap-1 mb-1">
+                {[...Array(5)].map((_, i) => (
+                  <i key={i} className="fas fa-star text-orange-500 text-xs sm:text-sm"></i>
+                ))}
+              </div>
+              <p className="text-xs sm:text-sm text-gray-600 font-semibold">Premium Quality</p>
+            </div>
+
+            <div className="flex flex-col items-center min-w-[140px]">
+              <div className="flex gap-1 mb-1">
+                {[...Array(5)].map((_, i) => (
+                  <i key={i} className="fas fa-star text-orange-500 text-xs sm:text-sm"></i>
+                ))}
+              </div>
+              <p className="text-xs sm:text-sm text-gray-600 font-semibold">Expert Installation</p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"
@@ -123,7 +186,7 @@ export function Home({ onNavigate }: HomeProps) {
               <i className="fas fa-cogs text-accent mr-3"></i>
               Our Services
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Comprehensive signage solutions tailored to meet your business needs
             </p>
           </motion.div>
@@ -264,7 +327,7 @@ export function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"
@@ -365,8 +428,8 @@ export function Home({ onNavigate }: HomeProps) {
           >
             <motion.a
               href="tel:8796968701"
-              className="bg-accent text-white px-8 py-4 rounded-lg text-lg hover:bg-accent/90 transition-colors shadow-lg inline-block"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(249, 115, 22, 0.5)" }}
+              className="bg-accent text-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-all shadow-lg inline-block"
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <i className="fas fa-phone mr-2"></i>
@@ -374,7 +437,7 @@ export function Home({ onNavigate }: HomeProps) {
             </motion.a>
             <motion.button
               onClick={() => onNavigate('contact')}
-              className="bg-white text-primary px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="bg-white border-2 border-primary text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-all shadow-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
